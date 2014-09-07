@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hacker News</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' rel='stylesheet' type='text/css'>
+
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <div id="main">
+
+            <h1 id="title">Hacker <span>News</span></h1>
+
+            <section id="news">
+
+            <!--
+              <article class="main">
+
+                <header>
+
+                  <h1><a href="https://medium.com/@zmh/bye-google-maps-ea3ea10f84dc" target="_blank">Citymapper is what happens when you understand user experience</a></h1>
+
+                  <span class="author">by raywhitney</span>
+
+                </header>
+
+                <footer>
+
+                  <span class="comments">69 <em>comments</em></span>
+
+                  <span class="points">36 <em>points</em></span>
+
+                  <span class="time">2 hours ago</span>
+
+                </footer>
+
+              </article>
+
+            -->
+
+            <i id="loading">loading</i>
+            <i id="error" class="hidden"><a href="">Error. Reload page.</a></i>
+
+
+            </section>
+
+
+        </div>
+
+        <p id="infos">navigate using arrows and use enter to open article</p>
+        <p id="infos-mobile">swipe left or right</p>
+
+        <!-- build:js scripts/vendor.js -->
+        <script src="bower_components/hammerjs/hammer.js"></script>
+        <!-- endbuild -->
+        <!-- build:js scripts/main.js -->
+        <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

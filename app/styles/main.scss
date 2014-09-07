@@ -1,0 +1,311 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+@import 'sass-bootstrap/lib/bootstrap';
+
+@mixin transition( $val ) {
+  -webkit-transition: $val;
+  -moz-transition:$val;
+  -o-transition:$val;
+  -ms-transition:$val;
+  transition:$val;
+}
+
+@mixin rounded-corners($val) {
+  -webkit-border-radius:$val;
+  -moz-border-radius:$val;
+  -o-border-radius:$val;
+  border-radius:$val;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+
+    text-align: center;
+}
+
+/* Space out content a bit */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+
+  background: #8C0000;
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+#title {
+
+  padding-top: 30px;
+
+  color: white;
+  font-weight: 800;
+  font-size: 4em;
+  text-align: center;
+
+  line-height: 0.8em;
+
+  span {
+    font-weight: 400;
+  }
+
+}
+
+#main {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+#loading,
+#error {
+  display: block;
+  border-radius: 10px;
+  background: white;
+  padding: 2px 10px;
+  font-size: .9em;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
+#loading {
+
+  width: 80px;
+  margin-left: -50px;
+
+}
+#error {
+
+  width: 150px;
+  margin-left: -85px;
+
+}
+
+
+section  {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+
+  @include transition( margin-left .2s ease );
+
+}
+
+article {
+
+  position: relative;
+  display: inline-block;
+
+  margin: 0 15px;
+  margin-top: -150px;
+
+  width: 300px;
+  height: 300px;
+
+  background: black;
+
+  @include rounded-corners(50%);
+
+  overflow: hidden;
+
+  text-align: center;
+
+  @include transition( all .2s ease );
+
+  header,
+  footer {
+    @include transition(opacity .2s ease);
+  }
+
+  header {
+    position: relative;
+    height: 213px;
+    color: white;
+    background: #401000;
+  }
+
+  h1 {
+
+    position: absolute;
+    bottom: 30px;
+    width: 240px;
+    padding: 37px 30px 5px 30px;
+    margin: 0;
+
+    font-weight: normal;
+    font-size: 1.7em;
+    line-height: 1.05em;
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+    .author {
+
+      position: absolute;
+      display: block;
+      width: 100%;
+      bottom: 10px;
+
+      font-style: italic;
+    }
+
+
+  footer {
+
+    position: absolute;
+    width: 100%;
+    height: 87px;
+    top: 213px;
+
+    color: black;
+    background: white;
+  }
+
+    .comments,
+    .points {
+      position: absolute;
+      top: 10px;
+      font-size: 1.8em;
+      text-align: center;
+      line-height: 1em;
+      em {
+        display: block;
+        color: #999;
+        font-size: .5em;
+        font-style: normal;
+        line-height: 1em;
+      }
+
+    }
+    .comments {
+      left: 75px;
+    }
+
+    .points {
+      right: 75px;
+    }
+
+
+    .time {
+      position: absolute;
+      display: block;
+      width: 100%;
+      bottom: 8px;
+
+      color: #999;
+      text-align: center;
+    }
+
+  &.close {
+
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+
+    color: black;
+    background: white;
+
+    line-height: 150px;
+    vertical-align: top;
+
+    opacity: 1;
+
+    cursor: pointer;
+
+    header,
+    footer {
+      display: none;
+    }
+
+    &:hover {
+      background: #CCC;
+    }
+
+
+  }
+
+  &.next {
+    background: #401000;
+  }
+
+}
+
+#infos,
+#infos-mobile {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  margin: 0;
+
+  font-size: .8em;
+  color: white;
+
+}
+
+#infos-mobile {
+  display: none;
+}
+
+/* Responsive: Mobile */
+@media screen and (max-width: 768px) {
+
+  #title {
+    font-size: 3em;
+    padding-top: 0;
+    margin-top: 20px;
+  }
+
+  #infos {
+    display: none;
+  }
+
+  #infos-mobile {
+    display: block;
+    left: 10px;
+    text-align: center;
+  }
+
+}
+
+
+.hidden {
+  display: none !important;
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) and (max-height: 400px) {
+
+  #title {
+    font-size: 1.5em;
+    margin: 10px;
+    text-align: left;
+
+
+  }
+
+  #infos-mobile {
+    text-align: right;
+  }
+
+}
